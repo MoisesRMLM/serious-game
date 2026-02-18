@@ -103,5 +103,5 @@ layout_mode = 2
 [node name="decline" type="Button" parent="Panel/VBoxContainer/HBoxContainer" unique_id=1920064240]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="Panel/VBoxContainer" unique_id=994745059]
+[node name="back" type="Button" parent="Panel/VBoxContainer" unique_id=994745059]
 layout_mode = 2
