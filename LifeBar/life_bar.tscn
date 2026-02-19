@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://ggfdjphf8hij"]
+
+[ext_resource type="Texture2D" uid="uid://c5wc6u1d2vej5" path="res://Assets/images/New Piskel (3).png" id="1_jr6js"]
+[ext_resource type="Texture2D" uid="uid://d1rtpfp871nji" path="res://Assets/images/ordenador-removebg-preview.png" id="1_ptgio"]
+[ext_resource type="Texture2D" uid="uid://chkslx382j8id" path="res://Assets/images/ordenador_roto-removebg-preview.png" id="2_jr6js"]
+[ext_resource type="AudioStream" uid="uid://dv5icu7s00164" path="res://Assets/sound/Murasato Shota - Spiral and Heartbeat.mp3" id="2_ptgio"]
+[ext_resource type="Texture2D" uid="uid://cdd1tilicixm4" path="res://Assets/images/hacker-removebg-preview.png" id="3_jkyqg"]
+[ext_resource type="Texture2D" uid="uid://dit3mxka477j6" path="res://Assets/images/New Piskel (2).png" id="3_xd57a"]
+[ext_resource type="Script" uid="uid://dwq7eyiyj4o66" path="res://Scripts/bar.gd" id="4_mbsi5"]
+
+[node name="LifeBar" type="Node" unique_id=1755414142]
+
+[node name="Control" type="Control" parent="." unique_id=1516392912]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1485.0
+offset_bottom = 808.0
+
+[node name="Bar" type="TextureProgressBar" parent="." unique_id=2074675900]
+anchors_preset = -1
+anchor_left = 0.096
+anchor_top = -0.064
+anchor_right = 0.096
+offset_left = -108.592
+offset_top = 241.472
+offset_right = 1050.408
+offset_bottom = 508.0
+step = 0.01
+value = 90.0
+nine_patch_stretch = true
+texture_under = ExtResource("1_jr6js")
+texture_progress = ExtResource("3_xd57a")
+script = ExtResource("4_mbsi5")
+
+[node name="Left" type="TextureRect" parent="Bar" unique_id=1513708419]
+custom_minimum_size = Vector2(0, 0.5)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 82.0
+offset_top = -260.0
+offset_right = 206.0
+offset_bottom = -117.0
+grow_vertical = 0
+texture = ExtResource("1_ptgio")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Right" type="TextureRect" parent="Bar" unique_id=1194415979]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -426.0
+offset_top = -318.0
+offset_right = -36.0
+offset_bottom = -89.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("2_jr6js")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Top" type="TextureRect" parent="Bar" unique_id=1472976279]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -147.5
+offset_top = -140.0
+offset_right = 42.5
+offset_bottom = 64.0
+grow_horizontal = 2
+texture = ExtResource("3_jkyqg")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Bar" unique_id=1551738855]
+stream = ExtResource("2_ptgio")
+autoplay = true
