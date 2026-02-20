@@ -1,12 +1,15 @@
 [gd_scene format=3 uid="uid://by0nm8si5lc66"]
 
-[node name="Control" type="Control" unique_id=969625037]
+[ext_resource type="Script" uid="uid://dxavdc3ir577s" path="res://Scripts/email.gd" id="1_up85j"]
+
+[node name="email" type="Control" unique_id=969625037]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_up85j")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=2119204873]
 layout_mode = 1
@@ -20,31 +23,31 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer" unique_id=860214909]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=860214909]
 layout_mode = 2
 
-[node name="back" type="Button" parent="MarginContainer/VBoxContainer2" unique_id=1804918235]
+[node name="back" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1804918235]
 custom_minimum_size = Vector2(150, 50)
 layout_mode = 2
 size_flags_horizontal = 8
 text = "Back"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer2" unique_id=965737556]
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=965737556]
 layout_mode = 2
 
-[node name="sender" type="Label" parent="MarginContainer/VBoxContainer2/VBoxContainer" unique_id=986719290]
+[node name="sender" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer2" unique_id=986719290]
 layout_mode = 2
 text = "Sender :"
 
-[node name="subject" type="Label" parent="MarginContainer/VBoxContainer2/VBoxContainer" unique_id=1500877613]
+[node name="subject" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer2" unique_id=1500877613]
 layout_mode = 2
 text = "Subject :"
 
-[node name="Control" type="Control" parent="MarginContainer/VBoxContainer2" unique_id=172095543]
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer" unique_id=172095543]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer2" unique_id=326793686]
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer" unique_id=326793686]
 layout_mode = 2
 size_flags_vertical = 3
 text = "body
@@ -52,13 +55,4 @@ text = "body
 
 "
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer2" unique_id=1641370852]
-layout_mode = 2
-
-[node name="accept" type="Button" parent="MarginContainer/VBoxContainer2/HBoxContainer" unique_id=497004675]
-layout_mode = 2
-text = "Accept"
-
-[node name="decline" type="Button" parent="MarginContainer/VBoxContainer2/HBoxContainer" unique_id=832397603]
-layout_mode = 2
-text = "Decline"
+[connection signal="pressed" from="MarginContainer/VBoxContainer/back" to="." method="_on_back_pressed"]

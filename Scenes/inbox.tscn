@@ -1,0 +1,227 @@
+[gd_scene format=3 uid="uid://pmg4e31uukpu"]
+
+[ext_resource type="Texture2D" uid="uid://5370t54yr0e2" path="res://email_icon.png" id="1_ctpb2"]
+[ext_resource type="Script" uid="uid://c54ecnug7w1li" path="res://Scripts/inbox.gd" id="1_t5pcu"]
+[ext_resource type="Script" uid="uid://cgiajeiqd5ja8" path="res://Scripts/emailData.gd" id="2_fms44"]
+[ext_resource type="Resource" uid="uid://bxofofk77uumh" path="res://Emails/email1.tres" id="3_vfo86"]
+[ext_resource type="Resource" uid="uid://cscc7poclnnje" path="res://Emails/email2.tres" id="4_nqgr2"]
+[ext_resource type="Resource" uid="uid://dwbh18qf7ovw5" path="res://Emails/email3.tres" id="5_tkc3k"]
+
+[node name="inbox" type="Control" unique_id=1149034931]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t5pcu")
+email_list = Array[ExtResource("2_fms44")]([ExtResource("3_vfo86"), ExtResource("4_nqgr2"), ExtResource("5_tkc3k")])
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1421404183]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -567.5
+offset_top = -284.0
+offset_right = 567.5
+offset_bottom = 281.49
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=219372495]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Button" unique_id=1668212660]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_right = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Button/MarginContainer" unique_id=111115005]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Button/MarginContainer/HBoxContainer" unique_id=861906747]
+layout_mode = 2
+texture = ExtResource("1_ctpb2")
+expand_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Button/MarginContainer/HBoxContainer" unique_id=87686758]
+layout_mode = 2
+
+[node name="sender" type="Label" parent="VBoxContainer/Button/MarginContainer/HBoxContainer/HBoxContainer" unique_id=1902791265]
+layout_mode = 2
+text = "Sender: "
+
+[node name="separator" type="Label" parent="VBoxContainer/Button/MarginContainer/HBoxContainer/HBoxContainer" unique_id=1569367345]
+layout_mode = 2
+text = "|"
+
+[node name="subject" type="Label" parent="VBoxContainer/Button/MarginContainer/HBoxContainer/HBoxContainer" unique_id=753144467]
+layout_mode = 2
+text = "Subject: "
+
+[node name="Control" type="Control" parent="VBoxContainer/Button/MarginContainer/HBoxContainer" unique_id=1378536191]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="accept" type="Button" parent="VBoxContainer/Button/MarginContainer/HBoxContainer" unique_id=1235758199]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Accept"
+
+[node name="decline" type="Button" parent="VBoxContainer/Button/MarginContainer/HBoxContainer" unique_id=2057374395]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Decline"
+
+[node name="Button2" type="Button" parent="VBoxContainer" unique_id=1910002090]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Button2" unique_id=1193115860]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_right = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Button2/MarginContainer" unique_id=479334371]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Button2/MarginContainer/HBoxContainer" unique_id=1330167267]
+layout_mode = 2
+texture = ExtResource("1_ctpb2")
+expand_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Button2/MarginContainer/HBoxContainer" unique_id=105494141]
+layout_mode = 2
+
+[node name="sender" type="Label" parent="VBoxContainer/Button2/MarginContainer/HBoxContainer/HBoxContainer" unique_id=2100430323]
+layout_mode = 2
+text = "Sender: "
+
+[node name="separator" type="Label" parent="VBoxContainer/Button2/MarginContainer/HBoxContainer/HBoxContainer" unique_id=2065147231]
+layout_mode = 2
+text = "|"
+
+[node name="subject" type="Label" parent="VBoxContainer/Button2/MarginContainer/HBoxContainer/HBoxContainer" unique_id=1396893446]
+layout_mode = 2
+text = "Subject: "
+
+[node name="Control" type="Control" parent="VBoxContainer/Button2/MarginContainer/HBoxContainer" unique_id=510363032]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="accept" type="Button" parent="VBoxContainer/Button2/MarginContainer/HBoxContainer" unique_id=225124231]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Accept"
+
+[node name="decline" type="Button" parent="VBoxContainer/Button2/MarginContainer/HBoxContainer" unique_id=337773956]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Decline"
+
+[node name="Button3" type="Button" parent="VBoxContainer" unique_id=1247545802]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Button3" unique_id=347760898]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_right = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Button3/MarginContainer" unique_id=232416045]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Button3/MarginContainer/HBoxContainer" unique_id=1425064020]
+layout_mode = 2
+texture = ExtResource("1_ctpb2")
+expand_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Button3/MarginContainer/HBoxContainer" unique_id=1698598110]
+layout_mode = 2
+
+[node name="sender" type="Label" parent="VBoxContainer/Button3/MarginContainer/HBoxContainer/HBoxContainer" unique_id=1574798865]
+layout_mode = 2
+text = "Sender: "
+
+[node name="separator" type="Label" parent="VBoxContainer/Button3/MarginContainer/HBoxContainer/HBoxContainer" unique_id=1053946291]
+layout_mode = 2
+text = "|"
+
+[node name="subject" type="Label" parent="VBoxContainer/Button3/MarginContainer/HBoxContainer/HBoxContainer" unique_id=912519994]
+layout_mode = 2
+text = "Subject: "
+
+[node name="Control" type="Control" parent="VBoxContainer/Button3/MarginContainer/HBoxContainer" unique_id=403757994]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="accept" type="Button" parent="VBoxContainer/Button3/MarginContainer/HBoxContainer" unique_id=1322662899]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Accept"
+
+[node name="decline" type="Button" parent="VBoxContainer/Button3/MarginContainer/HBoxContainer" unique_id=1885264255]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Decline"
+
+[node name="Panel" type="Panel" parent="." unique_id=245652623]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=1825549364]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="sender" type="Label" parent="Panel/VBoxContainer" unique_id=269454513]
+layout_mode = 2
+
+[node name="subject" type="Label" parent="Panel/VBoxContainer" unique_id=349578919]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/VBoxContainer" unique_id=1512625406]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer" unique_id=361054823]
+layout_mode = 2
+
+[node name="accept" type="Button" parent="Panel/VBoxContainer/HBoxContainer" unique_id=723453667]
+layout_mode = 2
+
+[node name="decline" type="Button" parent="Panel/VBoxContainer/HBoxContainer" unique_id=1920064240]
+layout_mode = 2
+
+[node name="back" type="Button" parent="Panel/VBoxContainer" unique_id=994745059]
+layout_mode = 2
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button/MarginContainer/HBoxContainer/accept" to="." method="_on_accept_pressed" binds= ["Button"]]
+[connection signal="pressed" from="VBoxContainer/Button/MarginContainer/HBoxContainer/decline" to="." method="_on_decline_pressed" binds= ["Button"]]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2/MarginContainer/HBoxContainer/accept" to="." method="_on_accept_pressed" binds= ["Button2"]]
+[connection signal="pressed" from="VBoxContainer/Button2/MarginContainer/HBoxContainer/decline" to="." method="_on_decline_pressed" binds= ["Button2"]]
+[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button3/MarginContainer/HBoxContainer/accept" to="." method="_on_accept_pressed" binds= ["Button3"]]
+[connection signal="pressed" from="VBoxContainer/Button3/MarginContainer/HBoxContainer/decline" to="." method="_on_decline_pressed" binds= ["Button3"]]

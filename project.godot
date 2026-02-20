@@ -13,6 +13,10 @@ config_version=5
 config/name="secure check"
 config/features=PackedStringArray("4.6", "Forward Plus")
 
+[autoload]
+
+GameManager="*uid://c3qo1wvo6mdv3"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
