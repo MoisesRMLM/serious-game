@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://5370t54yr0e2"
-path="res://.godot/imported/email_icon.png-2f92152e0d43cca0730dad45f34d5cc0.ctex"
+path="res://.godot/imported/email_icon.png-65ec492c27b669641315de0a159e442f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://email_icon.png"
-dest_files=["res://.godot/imported/email_icon.png-2f92152e0d43cca0730dad45f34d5cc0.ctex"]
+source_file="res://Photos/email_icon.png"
+dest_files=["res://.godot/imported/email_icon.png-65ec492c27b669641315de0a159e442f.ctex"]
 
 [params]
 
